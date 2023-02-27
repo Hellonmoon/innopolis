@@ -162,12 +162,23 @@ html {
     display: block;
 }
 
+.close-popup {
+    height: 25px;
+    width: 25px;
+    top: -15px;
+    right: -15px;
+    overflow: hidden;
+    position: absolute;
+    cursor: pointer;
+}
+
 /*Main*/
 .main {
     max-width: 911px;
     width: 100%;
     margin: 0 auto;
     flex-grow: 1;
+    position: relative;
  }
 
 .pic {
@@ -192,6 +203,15 @@ h2 {
     font-size: 25px;
  }
 
+#course-title {
+    margin-bottom: 0px;
+}
+
+.intro-text {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .text {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -210,6 +230,13 @@ em {
     color: #CF5510;
 }
 
+.study-together {
+    font-family: 'Lobster', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 29px;
+    color: #646464;
+}
 /*Students*/
 
 .students {
@@ -218,6 +245,7 @@ em {
     flex-direction: row;
     max-width: 1200px;
     margin-top: 24px;
+    width: 100%;
 }
  .student-profile {
     padding-left: 50px;
@@ -233,10 +261,74 @@ em {
     text-align: center;
 }
 
+.my-name {
+    display: block;
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.newbie {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    background-color: #3AA828;
+    text-decoration: none;
+    top: -334px;
+    left: 116px;
+    position: relative;
+    padding: 2px 6px 2px;
+    border-radius: 20px;
+}
+
+/*About me*/
+
+td {
+    font-weight: bold; 
+    border: 1px solid #000000;
+ }
+ 
+.table-info {
+     border: 2px solid #000000;
+     border-collapse: collapse;
+
+ } 
+
+ .center-pic {
+     width: 500px;
+     height: auto;
+     margin: auto;
+     float: right;
+ }
+
+ .dramas {
+    margin-bottom: -15px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    text-align: justify;
+    font-weight: 400;
+    font-size: 18px;
+    max-width: 634px;
+    width: 100%;
+}
+
+.drama-list {
+    font-style: italic;
+}
+
+.my-photo {
+    width: 280px;
+    height: 372px;
+    float: right;
+    margin: 0 0 5px 10px;
+}
+
 /*About*/
 
 .video-title {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 25px;
@@ -244,9 +336,17 @@ em {
     color: #000000;
 }
 
-.video-pic {
-    width: 820px;
-    height: 549.33px;
+.iframe-video {
+    height: 0;
+    padding-bottom: 56.2%;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 
 /*Contacts*/
@@ -260,11 +360,12 @@ em {
     margin-left: 200px;
 }
 
-.map-pic {
+.map {
     height: 370px;
     max-width: 1268px;
     width: 100%;
     padding: 0 auto;
+    border: 0;
 }
 
 .phone-info {
@@ -277,6 +378,7 @@ em {
     width: 100%;
     text-decoration: underline;
     margin-top: 24px;
+    margin-bottom: 50px;
 }
 
 .main-contacts {
@@ -319,3 +421,10 @@ em {
     color: rgba(255, 255, 255, 0.5);
     text-decoration-line: underline;
 }
+
+@media (max-width: 1000px) {
+    .students {
+        flex-wrap: wrap;
+    }
+}
+ 
